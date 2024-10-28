@@ -1,0 +1,417 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Arduino XPlane11 Radio Controller"
+Date "2020-09-10"
+Rev "v0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Author: Ethan Hargunani"
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A1
+U 1 1 5F5AE03F
+P 3150 2450
+F 0 "A1" H 3150 3631 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 3150 3540 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 3150 2450 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3150 2450 50  0001 C CNN
+	1    3150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 5F5C259B
+P 3350 1000
+F 0 "#PWR07" H 3350 850 50  0001 C CNN
+F 1 "VCC" H 3365 1173 50  0000 C CNN
+F 2 "" H 3350 1000 50  0001 C CNN
+F 3 "" H 3350 1000 50  0001 C CNN
+	1    3350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F5C4FD2
+P 3250 4000
+F 0 "#PWR06" H 3250 3750 50  0001 C CNN
+F 1 "GND" H 3255 3827 50  0000 C CNN
+F 2 "" H 3250 4000 50  0001 C CNN
+F 3 "" H 3250 4000 50  0001 C CNN
+	1    3250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3550 3250 3750
+Wire Wire Line
+	3350 1000 3350 1450
+Wire Wire Line
+	2500 1900 2500 2050
+Wire Wire Line
+	2500 2050 2650 2050
+$Comp
+L power:VCC #PWR01
+U 1 1 5F5DA4EC
+P 900 1500
+F 0 "#PWR01" H 900 1350 50  0001 C CNN
+F 1 "VCC" V 915 1627 50  0000 L CNN
+F 2 "" H 900 1500 50  0001 C CNN
+F 3 "" H 900 1500 50  0001 C CNN
+	1    900  1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 1400 1050 1500
+Wire Wire Line
+	1100 1700 750  1700
+Wire Wire Line
+	750  1700 750  2250
+Wire Wire Line
+	750  2250 1450 2250
+$Comp
+L Device:R R1
+U 1 1 5F5DB79D
+P 1450 2550
+F 0 "R1" H 1520 2596 50  0000 L CNN
+F 1 "10k" H 1520 2505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" V 1380 2550 50  0001 C CNN
+F 3 "~" H 1450 2550 50  0001 C CNN
+	1    1450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2400 1450 2250
+$Comp
+L power:GND #PWR02
+U 1 1 5F5DC597
+P 1450 2900
+F 0 "#PWR02" H 1450 2650 50  0001 C CNN
+F 1 "GND" H 1455 2727 50  0000 C CNN
+F 2 "" H 1450 2900 50  0001 C CNN
+F 3 "" H 1450 2900 50  0001 C CNN
+	1    1450 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2700 1450 2900
+$Comp
+L Switch:SW_Push_Open SW1
+U 1 1 5F5DD30A
+P 1800 3500
+F 0 "SW1" H 1800 3715 50  0000 C CNN
+F 1 "SW_Push_Open" H 1800 3624 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 1800 3700 50  0001 C CNN
+F 3 "~" H 1800 3700 50  0001 C CNN
+	1    1800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Open SW2
+U 1 1 5F5DF0B0
+P 1850 4400
+F 0 "SW2" H 1850 4615 50  0000 C CNN
+F 1 "SW_Push_Open" H 1850 4524 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" H 1850 4600 50  0001 C CNN
+F 3 "~" H 1850 4600 50  0001 C CNN
+	1    1850 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3500 2250 3500
+$Comp
+L Device:R R2
+U 1 1 5F5DFEE5
+P 2250 3800
+F 0 "R2" H 2320 3846 50  0000 L CNN
+F 1 "10k" H 2320 3755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" V 2180 3800 50  0001 C CNN
+F 3 "~" H 2250 3800 50  0001 C CNN
+	1    2250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F5E1EF8
+P 2250 4050
+F 0 "#PWR04" H 2250 3800 50  0001 C CNN
+F 1 "GND" H 2255 3877 50  0000 C CNN
+F 2 "" H 2250 4050 50  0001 C CNN
+F 3 "" H 2250 4050 50  0001 C CNN
+	1    2250 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3500 2250 3650
+Wire Wire Line
+	2250 3950 2250 4050
+Wire Wire Line
+	2050 4400 2500 4400
+Wire Wire Line
+	1600 3500 950  3500
+Wire Wire Line
+	600  3500 600  1600
+Wire Wire Line
+	600  1600 1050 1600
+Wire Wire Line
+	1050 1600 1050 1500
+Connection ~ 1050 1500
+Wire Wire Line
+	1050 1500 900  1500
+Wire Wire Line
+	1650 4400 950  4400
+Wire Wire Line
+	950  4400 950  3500
+Connection ~ 950  3500
+Wire Wire Line
+	950  3500 600  3500
+$Comp
+L Device:R R3
+U 1 1 5F5E51D0
+P 2500 4650
+F 0 "R3" H 2570 4696 50  0000 L CNN
+F 1 "10k" H 2570 4605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical" V 2430 4650 50  0001 C CNN
+F 3 "~" H 2500 4650 50  0001 C CNN
+	1    2500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F5E5638
+P 2500 5000
+F 0 "#PWR05" H 2500 4750 50  0001 C CNN
+F 1 "GND" H 2505 4827 50  0000 C CNN
+F 2 "" H 2500 5000 50  0001 C CNN
+F 3 "" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4400 2500 4500
+Wire Wire Line
+	2500 4800 2500 5000
+$Comp
+L Connector:Conn_01x08_Female J1
+U 1 1 5F5E2780
+P 7150 2400
+F 0 "J1" H 7178 2376 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 7178 2285 50  0000 L CNN
+F 2 "Display:Adafruit_SSD1306" H 7150 2400 50  0001 C CNN
+F 3 "~" H 7150 2400 50  0001 C CNN
+	1    7150 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2700 4400 2700
+Wire Wire Line
+	4400 2700 4400 2950
+Wire Wire Line
+	4400 2950 3650 2950
+Wire Wire Line
+	6950 2800 6950 3200
+Wire Wire Line
+	6950 3200 8000 3200
+Wire Wire Line
+	8000 3200 8000 1500
+Wire Wire Line
+	8000 1500 4050 1500
+Wire Wire Line
+	4050 1500 4050 2850
+Wire Wire Line
+	4050 2850 3650 2850
+$Comp
+L power:VCC #PWR08
+U 1 1 5F5E7248
+P 6250 2200
+F 0 "#PWR08" H 6250 2050 50  0001 C CNN
+F 1 "VCC" H 6265 2373 50  0000 C CNN
+F 2 "" H 6250 2200 50  0001 C CNN
+F 3 "" H 6250 2200 50  0001 C CNN
+	1    6250 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 2200 6250 2200
+$Comp
+L power:GND #PWR09
+U 1 1 5F5E8909
+P 6550 1850
+F 0 "#PWR09" H 6550 1600 50  0001 C CNN
+F 1 "GND" H 6555 1677 50  0000 C CNN
+F 2 "" H 6550 1850 50  0001 C CNN
+F 3 "" H 6550 1850 50  0001 C CNN
+	1    6550 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6950 2100 6550 2100
+Wire Wire Line
+	6550 2100 6550 1850
+$Comp
+L dk_Encoders:PEC11R-4215F-S0024 S1
+U 1 1 5F60D53B
+P 1600 1500
+F 0 "S1" H 1550 1872 60  0000 C CNN
+F 1 "PEC11R-4215F-S0024" H 1550 1766 60  0000 C CNN
+F 2 "digikey-footprints:Rotary_Encoder_Switched_PEC11R" H 1800 1700 60  0001 L CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/PEC11R.pdf" H 1800 1800 60  0001 L CNN
+F 4 "PEC11R-4215F-S0024-ND" H 1800 1900 60  0001 L CNN "Digi-Key_PN"
+F 5 "PEC11R-4215F-S0024" H 1800 2000 60  0001 L CNN "MPN"
+F 6 "Sensors, Transducers" H 1800 2100 60  0001 L CNN "Category"
+F 7 "Encoders" H 1800 2200 60  0001 L CNN "Family"
+F 8 "https://www.bourns.com/docs/Product-Datasheets/PEC11R.pdf" H 1800 2300 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/bourns-inc/PEC11R-4215F-S0024/PEC11R-4215F-S0024-ND/4499665" H 1800 2400 60  0001 L CNN "DK_Detail_Page"
+F 10 "ROTARY ENCODER MECHANICAL 24PPR" H 1800 2500 60  0001 L CNN "Description"
+F 11 "Bourns Inc." H 1800 2600 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1800 2700 60  0001 L CNN "Status"
+	1    1600 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1400 1300 1400
+Wire Wire Line
+	1100 1700 1100 1300
+Wire Wire Line
+	1100 1300 1000 1300
+Wire Wire Line
+	1000 1300 1000 1050
+Wire Wire Line
+	1000 1050 2100 1050
+Wire Wire Line
+	2100 1050 2100 1400
+Wire Wire Line
+	2100 1400 1800 1400
+Wire Wire Line
+	1250 1900 1250 1700
+Wire Wire Line
+	1250 1700 1300 1700
+Wire Wire Line
+	1200 1600 1300 1600
+Wire Wire Line
+	1200 1600 1200 2050
+Wire Wire Line
+	1150 2150 1150 1500
+Wire Wire Line
+	1150 1500 1300 1500
+Wire Wire Line
+	1150 2150 2650 2150
+Wire Wire Line
+	1250 1900 2500 1900
+Wire Wire Line
+	3150 3550 3150 3750
+Wire Wire Line
+	3150 3750 3250 3750
+Connection ~ 3250 3750
+Wire Wire Line
+	3250 3750 3250 3900
+Wire Wire Line
+	3050 3550 3050 3900
+Wire Wire Line
+	3050 3900 3250 3900
+Connection ~ 3250 3900
+Wire Wire Line
+	3250 3900 3250 4000
+Wire Wire Line
+	1200 2050 2100 2050
+$Comp
+L power:GND #PWR0101
+U 1 1 5F8598D5
+P 2100 2050
+F 0 "#PWR0101" H 2100 1800 50  0001 C CNN
+F 1 "GND" H 2105 1877 50  0000 C CNN
+F 2 "" H 2100 2050 50  0001 C CNN
+F 3 "" H 2100 2050 50  0001 C CNN
+	1    2100 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5FEB8F4F
+P 4600 3500
+F 0 "H1" H 4700 3549 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4700 3458 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 4600 3500 50  0001 C CNN
+F 3 "~" H 4600 3500 50  0001 C CNN
+	1    4600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5FEB9442
+P 5900 3500
+F 0 "H3" H 6000 3549 50  0000 L CNN
+F 1 "MountingHole_Pad" H 6000 3458 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 5900 3500 50  0001 C CNN
+F 3 "~" H 5900 3500 50  0001 C CNN
+	1    5900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5FEB998C
+P 4650 4400
+F 0 "H2" H 4550 4357 50  0000 R CNN
+F 1 "MountingHole_Pad" H 4550 4448 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 4650 4400 50  0001 C CNN
+F 3 "~" H 4650 4400 50  0001 C CNN
+	1    4650 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5900 3600 5900 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5FECDDBF
+P 5900 3900
+F 0 "#PWR?" H 5900 3650 50  0001 C CNN
+F 1 "GND" V 5905 3772 50  0000 R CNN
+F 2 "" H 5900 3900 50  0001 C CNN
+F 3 "" H 5900 3900 50  0001 C CNN
+	1    5900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FED2487
+P 4600 3600
+F 0 "#PWR?" H 4600 3350 50  0001 C CNN
+F 1 "GND" V 4605 3472 50  0000 R CNN
+F 2 "" H 4600 3600 50  0001 C CNN
+F 3 "" H 4600 3600 50  0001 C CNN
+	1    4600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FED2932
+P 4650 4300
+F 0 "#PWR?" H 4650 4050 50  0001 C CNN
+F 1 "GND" V 4655 4172 50  0000 R CNN
+F 2 "" H 4650 4300 50  0001 C CNN
+F 3 "" H 4650 4300 50  0001 C CNN
+	1    4650 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1450 2250 2300 2250
+Wire Wire Line
+	2300 2250 2300 2450
+Wire Wire Line
+	2300 2450 2650 2450
+Connection ~ 1450 2250
+Wire Wire Line
+	2250 3500 2250 2550
+Wire Wire Line
+	2250 2550 2650 2550
+Connection ~ 2250 3500
+Wire Wire Line
+	2500 4400 2500 2650
+Wire Wire Line
+	2500 2650 2650 2650
+Connection ~ 2500 4400
+$EndSCHEMATC
